@@ -1,0 +1,51 @@
+name: uat_be_deploy
+
+on:
+  push:
+    branches:
+      - 'uat'
+
+jobs:
+  uat_be_deploy:
+    env:
+      ECR_IMAGE_TAG: 808873896286.dkr.ecr.eu-central-1.amazonaws.com/api:${{ github.sha }}
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: git clone
+      uses: actions/checkout@v2
+
+    - name: aws config
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: eu-central-1
+
+    - name: ecr login
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+
+    - name: build and push image
+      run: |
+        docker build -t $ECR_IMAGE_TAG .
+        docker push $ECR_IMAGE_TAG
+
+    - name: get task definition
+      run: |
+        aws ecs describe-task-definition --task-definition uat_api --query taskDefinition > task-definition.json
+
+    - name: render task definition
+      id: render-api-container
+      uses: aws-actions/amazon-ecs-render-task-definition@v1
+      with:
+        task-definition: task-definition.json
+        container-name: api
+        image: 808873896286.dkr.ecr.eu-central-1.amazonaws.com/api:${{ github.sha }}
+
+    - name: deploy
+      uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+      with:
+        task-definition: ${{ steps.render-api-container.outputs.task-definition }}
+        service: api
+        cluster: uat_digihappy

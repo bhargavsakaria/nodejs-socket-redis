@@ -1,0 +1,43 @@
+{
+  "error": {
+    "user_not_found": "Käyttäjää ei löydy",
+    "user_exists": "Käyttäjä on jo olemassa seuraavalla sähköpostiosoitteella",
+    "password_does_not_match": "Salasana ei täsmää",
+    "invalid_token": "Virheellinen pääsytunnus",
+    "something_went_wrong": "Jotain meni pieleen palvelinpuolella",
+    "invalid_req_body": "Virheellinen pyyntö lähetetty",
+    "group_not_found": "Ryhmää ei löydy",
+    "user_in_no_group": "Käyttäjä ei kuulu mihinkään ryhmään",
+    "staff_not_assigned": "Käyttäjällä ei ole määrättyjä eläkeläisiä",
+    "user_not_senior": "Käyttäjä ei ole vanhempi",
+    "casesensitive_yes_no": "Kirjainkoolla on merkitystä 'Kyllä tai 'Ei' sallitaan",
+    "app_version_info_exists": "Versiotiedot on jo tallennettu",
+    "unauthorized_access": "Luvaton pääsy",
+    "image_not_found": "Kuvaa ei löydy",
+    "image_type_not_allowed": "Vain jpg, jpeg, png, heif, heic, tiff, raw, webp tiedostomuoto sallittu",
+    "image_too_large": "Tiedosto on liian iso",
+    "session_active_in_another_device": "Käyttäjä on jo kirjautunut sisään toisella laitteella"
+  },
+  "success": {
+    "success": "Menestys",
+    "logged_in": "Käyttäjä kirjautunut sisään",
+    "logged_out": "Käyttäjä kirjautui ulos",
+    "revoked_tokens": "Kaikki tunnukset on nyt peruutettu",
+    "call_history_cleared": "Puheluhistoriasi on poistettu onnistuneesti",
+    "image_found": "Kuva löytynyt",
+    "new_image_data_saved": "Uusi kuva tallennettu",
+    "email_sent": "Lähetetty sähköposti salasanan vaihtamiseksi",
+    "auto_answer_status_changed": "Automaattisen vastauksen tila muutettu",
+    "auto_answer_status": "Automaattisen vastauksen tila",
+    "found_people": "Käyttäjäin yhdistetyt ihmiset",
+    "unread_notifications": "Lukemattomat ilmoitukset",
+    "pre_signed_url_generated": "Valmiiksi allekirjoitettu URL-osoite luotu",
+    "missed_calls": "Vastaamattomat puhelut",
+    "new_app_version_saved": "Uusi sovellusversiotiedot tallennettu",
+    "latest_version": "Löytyi viimeisimmän version tiedot"
+  },
+  "misc": {
+    "today": "Tänään",
+    "yesterday": "Eilen"
+  }
+}

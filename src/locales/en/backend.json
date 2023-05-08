@@ -1,0 +1,44 @@
+{
+  "error": {
+    "user_not_found": "User not found",
+    "user_exists": "User already exists with the following email address",
+    "password_does_not_match": "Password does not match",
+    "invalid_token": "Invalid token",
+    "something_went_wrong": "Something went wrong on server side",
+    "invalid_req_body": "Invalid request sent",
+    "group_not_found": "Group not found",
+    "user_in_no_group": "User does not belong to any group",
+    "staff_not_assigned": "User does not have any assigned seniors",
+    "user_not_senior": "User is not senior",
+    "casesensitive_yes_no": "Case sensitive 'Yes' or 'No' values allowed",
+    "app_version_info_exists": "Version information already saved",
+    "unauthorized_access": "Unauthorized access",
+    "image_not_found": "Image not found",
+    "image_type_not_allowed": "Only jpg, jpeg, png, heif, heic, tiff, raw, webp  file format allowed",
+    "image_too_large": "File too large",
+    "session_active_in_another_device": "User already logged in on another device"
+
+  },
+  "success": {
+    "success": "Success",
+    "logged_in": "User logged in",
+    "logged_out": "User logged out",
+    "revoked_tokens": "All tokens now revoked",
+    "call_history_cleared": "Your call history has been deleted successfully",
+    "image_found": "Image found",
+    "new_image_data_saved": "New image saved",
+    "email_sent": "Sent email to reset password",
+    "auto_answer_status_changed": "Auto answer status changed",
+    "auto_answer_status": "Auto answer status",
+    "found_people": "People found associated to User",
+    "unread_notifications": "Unread notifications",
+    "pre_signed_url_generated": "Pre signed URL generated",
+    "missed_calls": "Missed calls",
+    "new_app_version_saved": "New app version information saved",
+    "latest_version": "Found latest version information"
+  },
+  "misc": {
+    "today": "Today",
+    "yesterday": "Yesterday"
+  }
+}
